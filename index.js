@@ -18,6 +18,7 @@ startGame.addEventListener("click", function () {
   const gameScreen = document.createElement("section");
   gameScreen.classList.add("screen");
 
+  // Fixed HTML template - removed extra spaces and fixed data-testid attribute
   gameScreen.innerHTML = `
     <section id="gameContainer" class="game-container">
       <div id="playerStat" class="player-stat">
@@ -27,8 +28,7 @@ startGame.addEventListener("click", function () {
       <div id="gameStat" class="game-stat">
         <div id="colorBox" data-testid="colorBox" class="screen"></div>
         <div id="colorOptions" data-testid="colorOption" class="color-buttons"></div>
-        <div id="gameStatus data-testid="gameStatus""></div>
-        <div id="gameStatus " ></div>
+        <div id="gameStatus" data-testid="gameStatus"></div>
       </div>
       <button type="button" id="newGameButton" data-testid="newGameButton">Start New Game</button>
       <button type="button" id="endGame">End Game</button>
@@ -37,7 +37,7 @@ startGame.addEventListener("click", function () {
 
   document.body.appendChild(gameScreen);
 
-  // Get fresh references to elements AFTER adding them to the DOM
+  // Get fresh references to elements
   const colorBox = document.getElementById("colorBox");
   const colorOptions = document.getElementById("colorOptions");
   const gameStatus = document.getElementById("gameStatus");
@@ -50,18 +50,8 @@ startGame.addEventListener("click", function () {
   let targetColor;
 
   const colors = [
-    "#FF0000",
-    "#00FF00",
-    "#0000FF",
-    "#FFFF00",
-    "#FF00FF",
-    "#00FFFF",
-    "#FFA500",
-    "#800080",
-    "#008000",
-    "#800000",
-    "#008080",
-    "#000080",
+    "#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF",
+    "#FFA500", "#800080", "#008000", "#800000", "#008080", "#000080"
   ];
 
   function getRandomColor() {
@@ -106,6 +96,10 @@ startGame.addEventListener("click", function () {
 
     // Reset game status
     gameStatus.textContent = "";
+    styleGameStatus();
+  }
+
+  function styleGameStatus() {
     gameStatus.style.position = "absolute";
     gameStatus.style.top = "10%";
     gameStatus.style.left = "50%";
