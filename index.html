@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Game</title>
+    <script
+      src="https://kit.fontawesome.com/236bd5672a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="cGame.css" />
+  </head>
+  <body id="body">
+    <section
+      id="gameInstructions"
+      data-testid="gameInstructions"
+      class="game-instructions"
+    >
+      <h1>Guess the correct color!</h1>
+      <div class="buttons">
+        <button class="mainButtons" type="button" id="startGame">
+          Start Game
+        </button>
+        <button class="mainButtons" type="button" id="howToPlay">
+          How To Play
+        </button>
+        <div id="popUp" class="pop-up">
+          <button id="cancel" type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <h2>How To Play</h2>
+          <ul>
+            <li>Select the color that matches the color of the larger box</li>
+            <li>If correct, continue playing</li>
+            <li>Highest score shows your best score</li>
+            <li>Score shows your current score in the game</li>
+            <li>
+              Click on START NEW GAME start a new round and END GAME to go back
+              to main menu.
+            </li>
+          </ul>
+          <p>!!!!! ENJOY !!!!!</p>
+        </div>
+      </div>
+    </section>
+    <script src="cGame.js"></script>
+  </body>
+</html>
