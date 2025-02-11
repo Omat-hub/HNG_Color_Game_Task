@@ -30,8 +30,11 @@ startGame.addEventListener("click", function () {
         <div id="colorOptions" data-testid="colorOption" class="color-buttons"></div>
         <div id="gameStatus" data-testid="gameStatus"></div>
       </div>
-      <button type="button" id="newGameButton" data-testid="newGameButton">Start New Game</button>
+      <div class="game-buttons">
+         <button type="button" id="newGameButton" data-testid="newGameButton">Start New Game</button>
       <button type="button" id="endGame">End Game</button>
+      </div>
+     
     </section>
   `;
 
@@ -50,8 +53,18 @@ startGame.addEventListener("click", function () {
   let targetColor;
 
   const colors = [
-    "#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF",
-    "#FFA500", "#800080", "#008000", "#800000", "#008080", "#000080"
+    "#FF0000",
+    "#00FF00",
+    "#0000FF",
+    "#FFFF00",
+    "#FF00FF",
+    "#00FFFF",
+    "#FFA500",
+    "#800080",
+    "#008000",
+    "#800000",
+    "#008080",
+    "#000080",
   ];
 
   function getRandomColor() {
@@ -101,10 +114,10 @@ startGame.addEventListener("click", function () {
 
   function styleGameStatus() {
     gameStatus.style.position = "absolute";
-    gameStatus.style.top = "10%";
+    gameStatus.style.top = "13%";
     gameStatus.style.left = "50%";
     gameStatus.style.transform = "translate(-50%, -50%)";
-    gameStatus.style.fontSize = "clamp(16px, 5vw, 40px)";
+    gameStatus.style.fontSize = "clamp(16px, 5vw, 35px)";
     gameStatus.style.fontWeight = "600";
     gameStatus.style.textAlign = "center";
   }
